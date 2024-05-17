@@ -1,13 +1,37 @@
 version: "3.1"
 
 rules:
-
-- rule: Say goodbye anytime the user says goodbye
+- rule: Saudação
   steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: saudar
+  - action: utter_saudar
 
-- rule: Say 'I am a bot' anytime the user challenges
+- rule: Agendar Consulta
   steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
+  - intent: agendar_consulta
+  - action: utter_agendar_consulta
+
+- rule: Especificar Consulta
+  steps:
+  - intent: especificar_consulta
+  - action: utter_especificar_consulta
+
+- rule: Informar Dia
+  steps:
+  - intent: informar_dia
+  - action: utter_informar_dia
+
+- rule: Informar Horário
+  steps:
+  - intent: informar_horario
+  - action: utter_informar_horario
+
+- rule: Confirmar Consulta
+  steps:
+  - intent: confirmar_consulta
+  - action: utter_confirmar_consulta
+
+- rule: Cancelar Consulta
+  steps:
+  - intent: cancelar_consulta
+  - action: utter_cancelar_consulta

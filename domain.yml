@@ -1,34 +1,63 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - saudar
+  - agendar_consulta
+  - especificar_consulta
+  - informar_dia
+  - informar_horario
+  - confirmar_consulta
+  - cancelar_consulta
+
+entities:
+    - especialidade
+    - dia
+    - horario
+
+slots:
+  especialidade:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: especialidade
+  dia:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: dia
+  horario:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: horario
 
 responses:
-  utter_greet:
-  - text: "Hey! How are you?"
+  utter_saudar:
+    - text: "Olá, tudo bem? Como posso ajudá-lo hoje?"
+  utter_agendar_consulta:
+    - text: "Certo, pode me informar a especialidade do médico que deseja realizar a consulta? "
+  utter_especificar_consulta:
+    - text: "Ok, você procura a especialidade de {especialidade}. Qual dia deseja?"
+  utter_informar_dia:
+    - text: "E qual horário?"
+  utter_informar_horario:
+    - text: "Combinado, sua consulta será realizada no dia {dia} e horário {horario}. Gostaria de confirmar o agendamento?"
+  utter_confirmar_consulta:
+    - text: "Consulta agendada! Até lá."
+  utter_cancelar_consulta:
+    - text: "Que pena. Se precisar de algo a mais nos contate novamente."
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+actions:
+  - utter_saudar
+  - utter_agendar_consulta
+  - utter_especificar_consulta
+  - utter_informar_dia
+  - utter_informar_horario
+  - utter_confirmar_consulta
+  - utter_cancelar_consulta
+  - utter_goodbye
 
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+

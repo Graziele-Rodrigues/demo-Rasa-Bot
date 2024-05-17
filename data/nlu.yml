@@ -1,91 +1,39 @@
 version: "3.1"
 
 nlu:
-- intent: greet
+- intent: saudar
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+    - Olá
+    - Oi
+    - E aí
+- intent: agendar_consulta
+  examples: |
+    - Quero agendar uma consulta
+    - Gostaria de marcar uma consulta
+    - Como faço para agendar uma consulta?
+- intent: especificar_consulta
+  examples: |
+    - Preciso de uma consulta com um especialista em {especialidade}
+    - Quero agendar uma consulta de {especialidade}
+    - Procuro um médico especializado em {especialidade}
+- intent: informar_dia
+  examples: |
+    - Na sexta-feira
+    - No dia 10 de maio
+    - A consulta será no dia {dia}
+- intent: informar_horario
+  examples: |
+    - Pela manhã
+    - Pela tarde
+    - Horário {horario}
+- intent: confirmar_consulta
+  examples: |
+    - Sim, confirmo
+    - Está correto
+    - Confirmo o agendamento
+- intent: cancelar_consulta
+  examples: |
+    - Quero cancelar minha consulta
+    - Não poderei comparecer à consulta
+    - Preciso desmarcar meu compromisso
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
-
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
-
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
-
-- intent: mood_unhappy
-  examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
-
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
