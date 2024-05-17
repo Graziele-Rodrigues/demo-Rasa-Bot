@@ -21,8 +21,10 @@ Este é um projeto de um chatbot desenvolvido com o Rasa para facilitar o agenda
 ```bash
 git clone https://github.com/seuusuario/chatbot-agendamento-consulta.git
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Graziele-Rodrigues/demo-Rasa-Bot/HEAD)
 ```
+ou 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/Graziele-Rodrigues/demo-Rasa-Bot/HEAD)
+
 2. Instale as dependências:
 
 ```bash
