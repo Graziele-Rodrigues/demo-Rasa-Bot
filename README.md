@@ -40,15 +40,12 @@ pip install -r requirements.txt
 rasa train
 ```
 
-2. Inicie o servidor de ações:
+2. Inicie :
 
 ```bash
-rasa run actions
+rasa shell
 ```
-3. Inicie o servidor do chatbot:
-```bash
-rasa run -m models --enable-api --cors "*" --debug
-```
+
 
 ## Arquivos do Projeto
 - data/nlu.yml: Contém os exemplos de frases para treinamento do modelo NLU.
